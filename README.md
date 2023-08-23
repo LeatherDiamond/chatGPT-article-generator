@@ -6,7 +6,15 @@
 
 # Description
 
-This script harnesses the power of ChatGPT to generate a diverse range of content. It generates five unique titles, along with corresponding agendas for each title. The script then proceeds to generate a well-structured paragraph for each agenda item. What sets this script apart is its ability to automatically record and save the results in an HTML file, located in the same directory as the script. This feature enhances convenience and accessibility, allowing you to access the generated content without any extra steps.
+This versatile script harnesses the power of ChatGPT to enhance your creative projects in two dynamic ways. Upon execution, you can choose between generating descriptions or images based on your specific needs. Let's explore the script's capabilities:
+
+***Generating Descriptions:***
+
+The script excels at content ideation. It generates five captivating titles and corresponding agendas, setting the stage for your creative endeavors. Once you've got your structure in place, the script crafts well-structured paragraphs that align with each agenda item. The magic doesn't stop there — results are automatically saved in an HTML file in the script's directory, ensuring easy access and organization.
+
+***Generating Images:***
+
+Adapting to visual projects, the script can fetch images based on your input. With a simple query, it connects to image repositories, retrieving images that match your concept. Whether you're designing presentations, blog posts, or social media content, this feature adds a visually appealing dimension to your work. Results are automatically saved in the script's directory.
 
 # How to start?
 
@@ -26,29 +34,30 @@ python -m venv env
 pip install -r requirements.txt
 ```
 
-**4. Provide `OpenAI API KEY` in line 3 of *"main.py"* file.**
+**4. Provide `API_KEY` variable in `.env` file in the directory where the script is located.**
 
-> More details on how to get the key can be found by clicking on the following [link](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key).
+> You can generate API keys in the OpenAI web interface. See the [link](https://platform.openai.com/account/api-keys) for details.
 
-**5. Run the script, write a topic you want the AI to respond to, enjoy the power of ChatGPT.** 
+**5. Run the script, choose the option of generating content, enjoy the power of ChatGPT.** 
 
 
 # Why should you try it?
 
-1. Effortless Content Ideation: With the script, generating content ideas becomes a breeze. It assists in brainstorming by automatically generating titles and agendas that can serve as starting points for your creative projects.
+1. ***Effortless Content Ideation:*** With the script, generating content ideas becomes a breeze. It assists in brainstorming by automatically generating titles and agendas that serve as starting points for your creative projects.
 
-2. Structured Content Creation: The script streamlines the content creation process by not only suggesting titles and agendas but also recording the generated paragraphs in a structured manner. This ensures that your final output is both well-organized and coherent.
+2. ***Structured Content Creation:*** The script streamlines the content creation process by suggesting titles and agendas, while also recording generated paragraphs in a structured manner. This guarantees your final output is organized and coherent.
 
-3. Time-Saving: Instead of spending hours brainstorming, outlining, and saving content manually, the script automates these tasks. It significantly reduces the time you invest in content preparation while maintaining quality.
+3. ***Time-Saving:*** Save hours by automating brainstorming, outlining, and content saving. The script significantly reduces the time invested in content preparation while maintaining high quality.
 
-4. Diverse Applications: Whether you're a writer, presenter, or content creator, this script caters to a wide range of applications. It's equally useful for blog post ideas, presentation outlines, or generating snippets for social media posts.
+4. ***Diverse Applications:*** Suited for writers, presenters, and content creators, the script caters to various needs. It's perfect for generating blog post ideas, crafting presentation outlines, or creating engaging snippets for social media.
 
-5. Harnessing GPT-3.5: By utilizing GPT-3.5's language capabilities, the script produces human-like text that adapts to your provided context. This ensures that the generated content aligns with your intended style and tone.
+5. ***Harnessing GPT-3.5:*** Leveraging GPT-3.5's language capabilities, the script produces human-like text adapted to your context. Content is aligned with your intended style and tone, adding authenticity to your work.
 
-6. Customizability: The script is designed to be adaptable to your specific needs. You can easily tweak parameters, such as the number of titles or the length of generated paragraphs, to match your preferences and requirements. This level of customization empowers you to fine-tune the generated content to align perfectly with your project's goals.
+6. ***Customizability:*** Tailor the script to your requirements. Easily modify parameters such as the number of titles, length of paragraphs, image size to match your preferences. This customization empowers you to fine-tune generated content to fit your project perfectly.
 
+7. ***Image Generation:*** Take your creativity further with the ability to generate images based on your queries. The script fetches visuals that align with your ideas and saves them to the root directory, adding a visual dimension to your content.
 
-Experience the convenience, efficiency, and accessibility of automated content generation. Try out this script and witness how it can transform your content creation workflow. Say goodbye to writer's block and hello to an endless stream of ideas, structured content, all neatly saved in an HTML file right alongside your script.
+Experience the convenience, efficiency, and accessibility of automated content generation. Try out this script and witness how it transforms your content creation workflow. Bid farewell to writer's block and welcome an endless stream of ideas, structured content, and visuals, all neatly saved in separate files alongside your script.
 
 # License
 
