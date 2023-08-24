@@ -108,9 +108,7 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "ChatGPT content generator Backend",
-    "DESCRIPTION": f"""
-    AI-driven content generator. Crafting text or images effortlessly using chatGPT's capabilities.
-    """,
+    "DESCRIPTION": "AI-driven content generator. Crafting text or images effortlessly using chatGPT's capabilities.",
     "VERSION": "1.1.0",
     "SERVE_INCLUDE_SCHEMA": False,
 }
