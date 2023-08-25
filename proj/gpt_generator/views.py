@@ -3,6 +3,7 @@ import uuid
 from base64 import b64decode
 
 from django.conf import settings
+from django.http import FileResponse
 
 import openai
 
@@ -100,6 +101,4 @@ class GeneratedImageViewSet(viewsets.ModelViewSet):
         image = GeneratedImage(description=prompt, image=f"generated_images/{filename}")
         image.save()
 
-        file_absolute_path = os.path.abspath(filepath)
-
-        return Response({"file_path": file_absolute_path}, status=status.HTTP_201_CREATED)
+        return FileResponse(open(filepath, 'rb'), as_attachment=True, filename=filename)
