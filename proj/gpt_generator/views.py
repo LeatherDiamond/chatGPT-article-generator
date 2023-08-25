@@ -20,6 +20,8 @@ class GeneratedResponseViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         user_input = request.data.get("user_input")
         num_titles = request.data.get("num_titles", 5)
+        num_agendas = request.data.get("num_agendas", 5)
+        num_words = request.data.get("num_symbols", 250)
         openai.api_key = os.getenv("API_KEY")
 
         response_messages = []
@@ -31,7 +33,12 @@ class GeneratedResponseViewSet(viewsets.ModelViewSet):
         reply1 = chat.choices[0].message.content
 
         response_messages.append({"role": "assistant", "content": reply1})
-        response_messages.append({"role": "user", "content": f"Make agenda for every article {reply1}."})
+        response_messages.append(
+            {
+                "role": "user",
+                "content": f"Make agenda only with {num_agendas} item for every article {reply1}. Every agenda should start with '-' symbol only.",
+            }
+        )
 
         chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=response_messages)
         reply2 = chat.choices[0].message.content
@@ -48,9 +55,14 @@ class GeneratedResponseViewSet(viewsets.ModelViewSet):
 
         with open(filepath, "r") as f:
             for line in f:
-                if line.startswith("-") or line[0].isdigit():
+                if line.startswith("-"):
                     agenda_item = line.strip()
-                    paragraph_messages = [{"role": "user", "content": f"Write a paragraph about {line}."}]
+                    paragraph_messages = [
+                        {
+                            "role": "user",
+                            "content": f"Write a paragraph about {line}. Every paragraph should be no longer than {num_words} words.",
+                        }
+                    ]
                     chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=paragraph_messages)
                     reply3 = chat.choices[0].message.content
 

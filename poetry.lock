@@ -243,7 +243,7 @@ pyflakes = ">=3.0.0"
 name = "autopep8"
 version = "2.0.2"
 description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -1155,7 +1155,7 @@ files = [
 name = "iniconfig"
 version = "2.0.0"
 description = "brain-dead simple config-ini parsing"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1492,7 +1492,7 @@ wandb = ["numpy", "openpyxl (>=3.0.7)", "pandas (>=1.2.3)", "pandas-stubs (>=1.1
 name = "packaging"
 version = "23.1"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1684,7 +1684,7 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4)", "pytest-co
 name = "pluggy"
 version = "1.2.0"
 description = "plugin and hook calling mechanisms for python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1763,7 +1763,7 @@ tests = ["pytest"]
 name = "pycodestyle"
 version = "2.10.0"
 description = "Python style guide checker"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -1830,7 +1830,7 @@ files = [
 name = "pytest"
 version = "7.4.0"
 description = "pytest: simple powerful testing with Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -2442,4 +2442,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ca17741512e58999d4dbb4643935befda7a7b6a1e8fcd966b364e401bcfdf74a"
+content-hash = "025008ceb9d9f5b16ba20ef0a2ff23eef3e9c151ade6ce21f25f9eebe9c472dd"
