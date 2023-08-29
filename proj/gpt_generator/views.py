@@ -74,9 +74,7 @@ class GeneratedResponseViewSet(viewsets.ModelViewSet):
         response = GeneratedResponse(content=reply3, file_name=filename)
         response.save()
 
-        file_absolute_path = os.path.abspath(filepath)
-
-        return Response({"file_path": file_absolute_path}, status=status.HTTP_201_CREATED)
+        return FileResponse(open(filepath, 'rb'), as_attachment=True, filename=filename)
 
 
 class GeneratedImageViewSet(viewsets.ModelViewSet):
