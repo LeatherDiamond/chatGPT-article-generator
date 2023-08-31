@@ -7,8 +7,7 @@ from django.http import FileResponse
 
 import openai
 
-from rest_framework import status, viewsets
-from rest_framework.response import Response
+from rest_framework import viewsets
 
 from .models import GeneratedImage, GeneratedResponse
 from .serializers import GeneratedImageSerializer, GeneratedResponseSerializer
@@ -74,7 +73,7 @@ class GeneratedResponseViewSet(viewsets.ModelViewSet):
         response = GeneratedResponse(content=reply3, file_name=filename)
         response.save()
 
-        return FileResponse(open(filepath, 'rb'), as_attachment=True, filename=filename)
+        return FileResponse(open(filepath, "rb"), as_attachment=True, filename=filename)
 
 
 class GeneratedImageViewSet(viewsets.ModelViewSet):
@@ -99,4 +98,4 @@ class GeneratedImageViewSet(viewsets.ModelViewSet):
         image = GeneratedImage(description=prompt, image=f"generated_images/{filename}")
         image.save()
 
-        return FileResponse(open(filepath, 'rb'), as_attachment=True, filename=filename)
+        return FileResponse(open(filepath, "rb"), as_attachment=True, filename=filename)
